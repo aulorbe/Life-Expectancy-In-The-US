@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 236,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -14,7 +14,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": 237,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -23,7 +23,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 238,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -33,7 +33,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 239,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -45,7 +45,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 240,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -54,7 +54,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 241,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -67,7 +67,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 242,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -80,7 +80,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 243,
    "metadata": {},
    "outputs": [
     {
@@ -798,7 +798,7 @@
        "[2553 rows x 5 columns]"
       ]
      },
-     "execution_count": 9,
+     "execution_count": 243,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -810,7 +810,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 244,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -819,7 +819,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 11,
+   "execution_count": 245,
    "metadata": {},
    "outputs": [
     {
@@ -1537,7 +1537,7 @@
        "[2602 rows x 5 columns]"
       ]
      },
-     "execution_count": 11,
+     "execution_count": 245,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1571,7 +1571,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1580,7 +1580,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
+   "execution_count": 281,
    "metadata": {},
    "outputs": [
     {
@@ -2298,7 +2298,7 @@
        "[3444 rows x 5 columns]"
       ]
      },
-     "execution_count": 15,
+     "execution_count": 281,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2316,9 +2316,11 @@
     "\n",
     "something.rename(columns = {'States_y':'States'})\n",
     "\n",
-    "final = something.drop(something.index[3444])\n",
     "\n",
-    "final"
+    "\n",
+    "final = something.drop([something.index[3444]])\n",
+    "\n",
+    "final\n"
    ]
   },
   {
