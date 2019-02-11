@@ -59,9 +59,11 @@ To perform analysis and fit models on the data, we also wanted to scale our cont
 Finally, we inspected each features’ correlations to one another.
 
 First with the initial features.
+
 ![screen shot 2019-02-11 at 10 44 56 am](https://user-images.githubusercontent.com/39356742/52574547-89dbee80-2dea-11e9-9eef-027d932ad61e.png)
 
-As well as the states.
+As well as the correlations with the states.
+
 ![screen shot 2019-02-11 at 10 45 27 am](https://user-images.githubusercontent.com/39356742/52574589-a5df9000-2dea-11e9-8c2f-fa9a1f93bf3d.png)
 
 ## BUILDING BASE MODELS
@@ -72,7 +74,7 @@ We chose both to run an OLS regression using the Statsmodels library as well as 
 
 ![screen shot 2019-02-11 at 10 55 37 am](https://user-images.githubusercontent.com/39356742/52575100-9f9de380-2deb-11e9-9849-0e9da1c09d0f.png)
 
-From our Statsmodels’ OLS we got an r-squared value of approximately 80%, which is the percent variance explained by our model. 
+From our Statsmodels’ OLS we got an R-squared value of approximately 80%, which is the percent variance explained by our model. 
 
 We observed that our data was slightly negatively skewed at -0.285 and leptokurtic at 5.619, the latter meaning that we had some outlier data points, or occasional values exceeding (in terms of standard deviations from the mean) what was predicted by the normal distribution. None of these were extreme enough for us to further tweak our algorithm at this point.
 
@@ -84,7 +86,7 @@ We visualized the model’s predictions versus the true y-values from our test d
 
 **Scikit-Learn**
 
-After running a linear regression with sklearn, we got the same r-squared value (0.799) and found no predictive  difference between the libraries.
+After running a linear regression with sklearn, we got the same R-squared value (0.799) and found no predictive  difference between the libraries.
 
 ## FEATURE SELECTION & FURTHER ENGINEERING
 
