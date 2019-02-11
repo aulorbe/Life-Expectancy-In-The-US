@@ -1,4 +1,4 @@
-# life_expectancy_in_the_US
+# life Expectancy in the US
 
 ## Goal
 
@@ -93,12 +93,15 @@ Using polynomial terms to add features to the model we ended with 1,539 features
 Using the "Least Absolute Shrinkage and Selection Operator" or LASSO to fit a model. LASSO is similar to Ordinary Least Squares although it performs both L1 regularization and selects features. We tried several alpha values (which is the constant that multiplies the L1 term) to optimize for the best R-squared value. An interesting note, if alpha is equal to 0, then the model is functionally a Ordinary Least Squares model, which was one of our better performing models.
 
 ![screen shot 2019-02-11 at 11 12 03 am](https://user-images.githubusercontent.com/39356742/52576346-e1c82480-2ded-11e9-8b96-e083634de9fe.png)
+
 This graphs shows the features LASSO kept and their corresponding weight in the model. 
 
 ## FINAL THOUGHTS
 
 The initial linear regression using Sklearn is the best performing model with a R-squared value of .799 and a Test Mean Squared Error of .174. 
+
 ![screen shot 2019-02-11 at 11 32 07 am](https://user-images.githubusercontent.com/39356742/52577718-b266e700-2df0-11e9-814c-d1a92e6389c6.png)
+
 We would like to add more features to increase the predictive power of our model (including Medicare, Educational Attainment, and Small Area Income), however we were not able to find data sets for either 2010 or for a county level in 2010. Also, we could further feature engineer by incorporating polynomial features into other regression models.
 
 
