@@ -20,6 +20,7 @@ Since the data came from 5 different sources we added a state and county ID colu
 ## EDA & FEATURE ENGINEERING
 
 **Confirming Distributions**
+
 In order to run a linear regression analysis, our data needed to meet three criteria:
 * They needed to be normally distributed
 * They needed to be linear
@@ -34,6 +35,7 @@ We found that the majority of our data was normally distributed, with the except
 ![screen shot 2019-02-11 at 10 09 31 am](https://user-images.githubusercontent.com/39356742/52572213-4b900080-2de5-11e9-8b4a-191bf9bca6f2.png)
 
 **Linearity & Homoskedasticity**
+
 To confirm linearity and homoscedasticity, we inspected scatter plots of each of our independent variables with our dependent variable.
 
 ![screen shot 2019-02-11 at 10 29 17 am](https://user-images.githubusercontent.com/39356742/52573349-f3a6c900-2de7-11e9-9a3b-5d4e6ebc1ae1.png)
@@ -45,12 +47,15 @@ Notes on interpreting the scatter plots:
 We found that most of our data was both linear and homoskedastic.
 
 **Categorical variables**
+
 To account for states in the model, and use them as possible features, we created a categorical variable for each state.
 
 **Scaling**
+
 To perform analysis and fit models on the data, we also wanted to scale our continuous variables using a Standard Scaler from the scikit-learn library.
 
 **Correlations**
+
 Finally, we inspected each features’ correlations to one another.
 
 First with the initial features.
@@ -62,6 +67,7 @@ As well as the states.
 ## BUILDING BASE MODELS
 
 **Statsmodels**
+
 We chose both to run an OLS regression using the Statsmodels library as well as a linear regression with the Scikit-Learn library, wanting to compare the performance between the two.
 
 ![screen shot 2019-02-11 at 10 55 37 am](https://user-images.githubusercontent.com/39356742/52575100-9f9de380-2deb-11e9-9849-0e9da1c09d0f.png)
@@ -77,19 +83,24 @@ We visualized the model’s predictions versus the true y-values from our test d
 ![screen shot 2019-02-11 at 10 57 58 am](https://user-images.githubusercontent.com/39356742/52575295-ef7caa80-2deb-11e9-87a6-fab8f1a847c6.png)
 
 **Scikit-Learn**
+
 After running a linear regression with sklearn, we got the same r-squared value (0.799) and found no predictive  difference between the libraries.
 
 ## FEATURE SELECTION & FURTHER ENGINEERING
 
 **Feature Selection**
+
 After running the initial linear regression model (using Scikit-Learn), we did some feature selection and engineering, starting with the wrapper method to select the top features of our model.
 Then we used two filter methods
 * Variance Threshold
 * Univariate Feature Selection
 
 **Further Feature Engineering**
+
 Using polynomial terms to add features to the model we ended with 1,539 features. This model is raised the R-squared value, but decreased the adjusted R-squared value. 
+
 **LASSO Method**
+
 Using the "Least Absolute Shrinkage and Selection Operator" or LASSO to fit a model. LASSO is similar to Ordinary Least Squares although it performs both L1 regularization and selects features. We tried several alpha values (which is the constant that multiplies the L1 term) to optimize for the best R-squared value. An interesting note, if alpha is equal to 0, then the model is functionally a Ordinary Least Squares model, which was one of our better performing models.
 
 ![screen shot 2019-02-11 at 11 12 03 am](https://user-images.githubusercontent.com/39356742/52576346-e1c82480-2ded-11e9-8b96-e083634de9fe.png)
