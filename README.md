@@ -1,4 +1,4 @@
-# life Expectancy in the US
+# Life Expectancy in the US
 
 ## Goal
 
